@@ -27,7 +27,8 @@ public class PlayerControls : MonoBehaviour
         rb.velocity = m * speed;
 
         Vector3 lookDirection = new Vector3(move.x, 0, move.y);
-        transform.rotation = Quaternion.LookRotation(lookDirection);
+        if (lookDirection != Vector3.zero)
+            transform.rotation = Quaternion.LookRotation(lookDirection);
     }
 
     void PressingTwo()
