@@ -6,12 +6,16 @@ using UnityEngine.InputSystem;
 public class PlayerControls : MonoBehaviour
 {
     PlayerInput controls;
+    public bool buttonPress;
     Vector3 move;
     Rigidbody rb;
     public float speed;
+    public int counterVal;
+    private int counter;
 
     private void Awake()
     {
+        buttonPress = false;
         controls = new PlayerInput();
         rb = GetComponent<Rigidbody>();
 
@@ -29,11 +33,18 @@ public class PlayerControls : MonoBehaviour
         Vector3 lookDirection = new Vector3(move.x, 0, move.y);
         if (lookDirection != Vector3.zero)
             transform.rotation = Quaternion.LookRotation(lookDirection);
+        if (counter > 0)
+            counter--;
+        else
+            buttonPress = false;
+
     }
 
     void PressingTwo()
     {
         print("pressing two");
+        buttonPress = true;
+        counter = counterVal;
     }
 
     private void OnEnable()
