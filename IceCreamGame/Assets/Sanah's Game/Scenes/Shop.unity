@@ -661,6 +661,7 @@ GameObject:
   - component: {fileID: 795470384}
   - component: {fileID: 795470383}
   - component: {fileID: 795470382}
+  - component: {fileID: 795470389}
   - component: {fileID: 795470387}
   - component: {fileID: 795470388}
   m_Layer: 0
@@ -775,7 +776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonPress: 0
   speed: 1000
-  counterVal: 0
+  counterVal: 30
 --- !u!65 &795470388
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -789,6 +790,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2, z: 1.5408888}
   m_Center: {x: 0, y: 0, z: 0.2704444}
+--- !u!114 &795470389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795470381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b58a63987164a54e92b7fa7908a7286, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHolding: 0
+  canHold: 0
+  smallBowl: {fileID: 7896573025183813796, guid: a3a7a1656e9bfd5499d7a4050150403f,
+    type: 3}
+  medBowl: {fileID: 1318545273200290040, guid: e90c28a187dcc3c43a6c462388518fa9, type: 3}
+  bigBowl: {fileID: 7011442927033735317, guid: 198f51ea758cc0641b719becc444c22d, type: 3}
+  counterVal: 20
 --- !u!1 &796222778
 GameObject:
   m_ObjectHideFlags: 0

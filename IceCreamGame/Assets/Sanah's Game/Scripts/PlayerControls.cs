@@ -34,7 +34,9 @@ public class PlayerControls : MonoBehaviour
         if (lookDirection != Vector3.zero)
             transform.rotation = Quaternion.LookRotation(lookDirection);
         if (counter > 0)
+        {
             counter--;
+        }
         else
             buttonPress = false;
 
@@ -42,7 +44,7 @@ public class PlayerControls : MonoBehaviour
 
     void PressingTwo()
     {
-        print("pressing two");
+        //print("pressing two");
         buttonPress = true;
         counter = counterVal;
     }
