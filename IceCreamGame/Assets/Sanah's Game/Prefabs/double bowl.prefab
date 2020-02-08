@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4585593814578050853}
   - component: {fileID: -810916864242498972}
+  - component: {fileID: 538772596496450814}
   m_Layer: 0
   m_Name: double bowl
   m_TagString: Untagged
@@ -24,8 +25,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1318545273200290040}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.17000008, y: 0.79999995, z: -0.001}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.30000013, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 1878449283545560185}
@@ -33,7 +34,7 @@ Transform:
   - {fileID: 8921863053901343932}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &-810916864242498972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48,6 +49,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bowlDetails: {fileID: 11400000, guid: a7a0af4a4313ad644b1da1e1ffe539fa, type: 2}
   spacesLeft: 0
+--- !u!114 &538772596496450814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318545273200290040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0f6a9a758fe4f40b453e63b22499e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  purple: {fileID: 11400000, guid: 4659c414347542d4eb2bdad7f84ec84b, type: 2}
+  orange: {fileID: 11400000, guid: 1dccc284f40c57648a58f4f187f00689, type: 2}
+  green: {fileID: 11400000, guid: 9923bb954cb8a9b4d9fcfd5cf28f8eb6, type: 2}
+  black: {fileID: 11400000, guid: 4dd1c53ff4e25cf4684cd5db4a46833d, type: 2}
 --- !u!1 &3475891241450997862
 GameObject:
   m_ObjectHideFlags: 0
@@ -74,7 +91,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3475891241450997862}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: 0, z: -2.044049}
+  m_LocalPosition: {x: -2.04, y: 1.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4585593814578050853}
@@ -151,8 +168,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8397421147070368653}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.0499998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4585593814578050853}
@@ -215,6 +232,7 @@ GameObject:
   - component: {fileID: 1878449283545560185}
   - component: {fileID: 4669072574076820883}
   - component: {fileID: 2802480303620993637}
+  - component: {fileID: 4569748333119983584}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -229,13 +247,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8826787967715729630}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: -0.99594605, z: 0}
+  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4585593814578050853}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 90}
 --- !u!33 &4669072574076820883
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -282,3 +300,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4569748333119983584
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8826787967715729630}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 2534964839176971238, guid: 461d075e838c5e843a8c77671b37ab42, type: 3}

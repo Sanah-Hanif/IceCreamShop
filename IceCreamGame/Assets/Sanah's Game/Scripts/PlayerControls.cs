@@ -12,6 +12,7 @@ public class PlayerControls : MonoBehaviour
     public float speed;
     public int counterVal;
     private int counter;
+    Quaternion dirToFace;
 
     private void Awake()
     {
@@ -32,13 +33,16 @@ public class PlayerControls : MonoBehaviour
 
         Vector3 lookDirection = new Vector3(move.x, 0, move.y);
         if (lookDirection != Vector3.zero)
-            transform.rotation = Quaternion.LookRotation(lookDirection);
+            dirToFace = Quaternion.LookRotation(lookDirection);
+
+        transform.rotation = Quaternion.Slerp(transform.rotation, dirToFace, Time.deltaTime * 7f);
+
         if (counter > 0)
         {
             counter--;
         }
         else
-            buttonPress = false;
+            ConsumeButton();
 
     }
 
@@ -57,5 +61,11 @@ public class PlayerControls : MonoBehaviour
     private void OnDisable()
     {
         controls.gameplay.Disable();
+    }
+
+    public void ConsumeButton()
+    {
+        buttonPress = false;
+        counter = 0;
     }
 }
