@@ -15,3 +15,4 @@ MonoBehaviour:
   colourname: 2
   colourCode: {r: 0.9318532, g: 0.9433962, b: 0.4672481, a: 0}
   myNum: 4
+  isYellow: 1

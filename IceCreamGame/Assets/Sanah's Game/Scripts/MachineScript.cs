@@ -8,11 +8,13 @@ public class MachineScript : MonoBehaviour
     public IceCreamDispenser ICD;
     Color myColour;
     int myNum;
+    bool isYellow;
 
     void Start()
     {
         myColour = ICD.colourCode;
         myNum = ICD.myNum;
+        isYellow = ICD.isYellow;
     }
 
     public int GetNum()
@@ -23,5 +25,10 @@ public class MachineScript : MonoBehaviour
     public Color GetCol()
     {
         return myColour;
+    }
+
+    public bool AmIYellow()
+    {
+        return isYellow;
     }
 }

@@ -18,4 +18,5 @@ public class IceCreamDispenser : ScriptableObject
     };
     public Color colourCode;
     public int myNum;
+    public bool isYellow;
 }

@@ -7,14 +7,18 @@ public class BowlScript : MonoBehaviour
     public Bowl bowlDetails;
     public int spacesLeft;
     private List<int> numbersHeld;
-    private PlayerControls player;
+    int sum;
+    bool hasYellow;
+
+    public int totalSpace;
 
     // Start is called before the first frame update
     void Start()
     {
+        sum = 0;
         spacesLeft = bowlDetails.totalSpaces;
+        totalSpace = bowlDetails.totalSpaces;
         numbersHeld = new List<int>();
-        player = transform.parent.gameObject.GetComponent<PlayerControls>();
     }
 
     // Update is called once per frame
@@ -23,12 +27,14 @@ public class BowlScript : MonoBehaviour
        
     }
 
-    public void CollectIceCream(int num, Color col)
+    public void CollectIceCream(int num, Color col, bool wasYellowIce)
     {
         //print("in this function");
         numbersHeld.Add(num);
+        if (wasYellowIce)
+            setYellow(wasYellowIce);
         GameObject currentIce = this.transform.GetChild(spacesLeft).gameObject;
-        print(currentIce);
+        //print(currentIce);
         currentIce.SetActive(true);
         currentIce.GetComponent<Renderer>().material.color = col;
 
@@ -52,11 +58,21 @@ public class BowlScript : MonoBehaviour
 
     public int SumList()
     {
-        int sum = 0;
+        sum = 0;
         foreach (int number in numbersHeld)
         {
             sum += number;
         }
         return sum;
+    }
+
+    public void setYellow (bool value)
+    {
+        hasYellow = value;
+    }
+
+    public bool GetYellow()
+    {
+        return hasYellow;
     }
 }

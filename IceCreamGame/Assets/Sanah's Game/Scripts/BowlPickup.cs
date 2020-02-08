@@ -64,7 +64,7 @@ public class BowlPickup : MonoBehaviour
                 if (BS.spacesLeft > 0)
                 {
                     MachineScript mach = other.GetComponent<MachineScript>();
-                    BS.CollectIceCream(mach.GetNum(), mach.GetCol());
+                    BS.CollectIceCream(mach.GetNum(), mach.GetCol(), mach.AmIYellow());
                     PC.ConsumeButton();
                 }
                 //print(this.transform.GetChild(1).gameObject.name);
@@ -94,7 +94,9 @@ public class BowlPickup : MonoBehaviour
                 int count = BS.GetListCount();
                 if (count > 1)
                 {
-                    MX.MixyMixy(MX.whatColour(sum, count), sum, count);
+                    MX.MixyMixy(MX.whatColour(sum, count, BS.totalSpace), sum, count);
+                    if (BS.GetYellow())
+                        BS.setYellow(false);
                     PC.ConsumeButton();
                 }
                     
@@ -105,6 +107,19 @@ public class BowlPickup : MonoBehaviour
         if (other.gameObject.tag == "Bin")
         {
             DropBowl();
+        }
+
+        if (other.gameObject.tag == "Serve")
+        {
+            
+            if (PC.buttonPress && isHolding)
+            {
+                BS = this.transform.GetChild(1).gameObject.GetComponent<BowlScript>();
+                MX = this.transform.GetChild(1).gameObject.GetComponent<Mixer>();
+                other.gameObject.GetComponent<OrderCreator>().CheckOrder(BS, MX);
+                Destroy(bowlHeld);
+                isHolding = false;
+            }
         }
     }
 }

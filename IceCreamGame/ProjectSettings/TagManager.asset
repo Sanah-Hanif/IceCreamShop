@@ -12,6 +12,7 @@ TagManager:
   - YellowMachine
   - Mixer
   - Bin
+  - Serve
   layers:
   - Default
   - TransparentFX

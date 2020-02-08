@@ -88,6 +88,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6614972620344763063}
   - component: {fileID: 2311650174216227473}
+  - component: {fileID: -4424905750902069184}
   m_Layer: 0
   m_Name: single bowl
   m_TagString: Untagged
@@ -125,6 +126,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bowlDetails: {fileID: 11400000, guid: abefb0b4ce94c484697774cea9a07638, type: 2}
   spacesLeft: 0
+  totalSpace: 0
+--- !u!114 &-4424905750902069184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7896573025183813796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0f6a9a758fe4f40b453e63b22499e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  purple: {fileID: 11400000, guid: 4659c414347542d4eb2bdad7f84ec84b, type: 2}
+  orange: {fileID: 11400000, guid: 1dccc284f40c57648a58f4f187f00689, type: 2}
+  green: {fileID: 11400000, guid: 9923bb954cb8a9b4d9fcfd5cf28f8eb6, type: 2}
+  black: {fileID: 11400000, guid: 4dd1c53ff4e25cf4684cd5db4a46833d, type: 2}
+  howMixed: 0
 --- !u!1 &8070809024399369777
 GameObject:
   m_ObjectHideFlags: 0

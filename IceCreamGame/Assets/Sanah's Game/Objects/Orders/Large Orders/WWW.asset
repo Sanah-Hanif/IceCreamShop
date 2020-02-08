@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 530293a05d7e06146aae97747d28bc96, type: 3}
-  m_Name: BlBlBl
+  m_Name: WWW
   m_EditorClassIdentifier: 
   bowlVal: 3
   mixVal: 1
