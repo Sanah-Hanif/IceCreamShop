@@ -43,6 +43,15 @@ public class BowlPickup : MonoBehaviour
         }
     }
 
+    private void DropBowl()
+    {
+        if (PC.buttonPress && isHolding)
+        {
+            Destroy(bowlHeld);
+            isHolding = false;
+        }
+    }
+
     private void PickUpIceCream(GameObject other, string tag)
     {
         if (other.tag == tag)
@@ -91,6 +100,11 @@ public class BowlPickup : MonoBehaviour
                     
             }
             
+        }
+
+        if (other.gameObject.tag == "Bin")
+        {
+            DropBowl();
         }
     }
 }

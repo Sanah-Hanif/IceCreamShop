@@ -11,6 +11,7 @@ TagManager:
   - BlueMachine
   - YellowMachine
   - Mixer
+  - Bin
   layers:
   - Default
   - TransparentFX
