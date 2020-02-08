@@ -26,7 +26,7 @@ public class PlayerControls : MonoBehaviour
         controls.gameplay.move.canceled += ctx => move = Vector3.zero;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         Vector3 m = new Vector3(move.x, 0, move.y) * Time.deltaTime;
         rb.velocity = m * speed;
@@ -35,7 +35,7 @@ public class PlayerControls : MonoBehaviour
         if (lookDirection != Vector3.zero)
             dirToFace = Quaternion.LookRotation(lookDirection);
 
-        transform.rotation = Quaternion.Slerp(transform.rotation, dirToFace, Time.deltaTime * 7f);
+        transform.rotation = Quaternion.Slerp(transform.rotation, dirToFace, Time.deltaTime * 5f);
 
         if (counter > 0)
         {
